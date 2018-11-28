@@ -1,0 +1,30 @@
+<header class="h-header">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li @@if(context.index=='home'){class='active'}><a href="./index.html">公司首页</a></li>
+          <li @@if(context.index=='desc'){class='active'}><a href="./desc.html">企业简介</a></li>
+          <li @@if(context.index=='news'){class='active'}><a href="./news.html">行业新闻</a></li>
+          <li @@if(context.index=='cooperation'){class='active'}><a href="./cooperation.html">商务合作</a></li>
+          <li @@if(context.index=='service'){class='active'}><a href="service.html">调研服务</a></li>
+          <li @@if(context.index=='contact'){class='active'}><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>

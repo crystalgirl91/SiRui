@@ -1,0 +1,93 @@
+@maincolor: #e9b76f;
+@fontlight:#333333; 
+.title-default{
+	text-align: center;
+	margin-bottom: 10px;
+	.line{
+		width: 50px;
+		height: 2px;
+		background-color:@maincolor;
+		border-radius:2px;
+		margin:0 auto 3px auto;
+	}
+	.small{
+		font-size: 16px;
+	}
+	.title{
+		font-size: 18px;
+	}
+}
+.h-footer{
+	background-color: #3f3a39;
+	padding:15px 0;
+	.bigname{
+		font-size: 13px;
+		color:@maincolor;
+		text-align: center;
+		margin-bottom: 10px;
+		@media (min-width: 768px) {
+			margin-right: 40px;
+			margin-bottom: 0px;
+			margin-top: 15px;
+		}
+	}
+	.footer-nav-wrap{
+		color:#fff;
+		.footer-nav{
+			.nav-item{
+				float: left;
+				width: 50%;
+			}
+			font-size:12px;
+			margin-bottom: 0px;
+		}
+	}
+}
+.h-header{
+	.navbar{
+		margin-bottom: 0px;
+		background-color:#fff;
+	}
+	.navbar-brand{
+		padding-top: 0px;
+		padding-bottom:0px;
+		padding-right: 0px;
+	}
+	.navbar-brand>img{
+		height: 100%;
+	}
+	.nav>li>a:focus, .nav>li>a:hover{
+		background-color:@maincolor;
+		color: #fff;
+	}
+	a{
+		color:#5a5655;
+	}
+	.navbar-collapse{
+	}
+	.navbar-toggle{
+		border-color:@maincolor;
+	}
+	.navbar-toggle .icon-bar{
+		background-color:@maincolor;
+	}
+	.nav li.active a{
+		background-color:@maincolor;
+		color: #fff;
+	}
+}
+.h-carousel{
+	height: 270px;
+	@media (max-width: 768px) {
+		height: 165px;
+	}
+	.carousel-inner{
+		height: 100%;
+		.item{
+			height: 100%;
+			background-position:center;
+			background-size:cover;
+			background-repeat:no-repeat;
+		}
+	}
+}

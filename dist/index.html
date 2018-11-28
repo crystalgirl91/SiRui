@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<!-- 设置移动端视图 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<meta name="format-detection" content="telphone=no, email=no" />
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<link rel="stylesheet" type="text/css" href="./plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./styles/main.css">
+<link rel="stylesheet" type="text/css" href="./styles/template.css">
+<script type="text/javascript" src="./plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./plugins/hammer/hammer.min.js"></script>
+
+</head>
+<body>
+	<div class="h-container">
+		<header class="h-header">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class='active'><a href="./index.html">公司首页</a></li>
+          <li ><a href="./desc.html">企业简介</a></li>
+          <li ><a href="./news.html">行业新闻</a></li>
+          <li ><a href="./cooperation.html">商务合作</a></li>
+          <li ><a href="service.html">调研服务</a></li>
+          <li ><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+		<div id="carousel-example-generic" class="carousel slide h-carousel" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="background-image: url(./images/index/nav1.jpg);"></div>
+  </div>   
+</div>
+<script>
+  var ele = document.getElementById("carousel-example-generic");
+  var hammertime = new Hammer(ele);
+  hammertime.on('swipeleft', function(ev) {
+     $("#carousel-example-generic").carousel('next');
+  });
+  hammertime.on('swiperight', function(ev) {
+      $("#carousel-example-generic").carousel('prev');
+  });
+  $("#carousel-example-generic").carousel('cycle');
+</script>
+		<div class="body-index">
+			<ul>
+				<li class="block block-thin">
+					<div class="title-default">
+	<div class="line"></div>
+	<div class="small">about us</div>
+	<div class="title">关于我们</div>
+</div>
+					<p class="artical">
+						思睿致远信息咨询（北京）有限公司，拥有深厚的旅游行业研究背景及领先的互联网技术优势，是一家为各级旅游行政
+						主管部门提供旅游领域的民意调查、旅游服务质量监测、满意度测评、舆情监测、旅游公共服务提升相关服务的专业机构，致
+						力于将满意度调查、先进信息技术、旅游行业管理、旅游市场调研相结合，通过连续性数据调查和定制化专项
+						研究，提供对旅游行业管理全方位的独特见解和高附加值的个性化支持。
+					</p>
+					<div class="row label-list">
+						<div class="col-xs-4 label-icon"></div>
+						<div class="col-xs-4 label-icon"></div>
+						<div class="col-xs-4 label-icon"></div>
+					</div>
+				</li>
+				<li class="block block-news">
+					<div class="title-default">
+	<div class="line"></div>
+	<div class="small">news</div>
+	<div class="title">行业新闻</div>
+</div>
+					<div class="container-fluid">
+						<div class="col-sm-4 col-xs-12 block-news-left">
+							<div class="desc">
+								<h3 class="desc-title h-h3 h-blod">帮您详细解析PPP的歪路与正道</h3>
+								<p class="desc-cont">近两年来，不少地方政府把ppp模式搞的风生水起，可是回
+									头看看也有不少问题，以至于财政部在近期连续发文进行规
+									范。下面有小编带您一起了解ppp的歪路与正道。</p>
+																</div>
+						</div>
+						<div class="col-sm-8 col-xs-12 block-news-right">
+							<ul class="panellist">
+								<li class="panel">
+									<div class="table-cell">
+										<div class="panel-head">
+											<div class="day">12</div>
+											<div class="date">2018-09</div>
+										</div>
+									</div>
+									<div class="table-cell">
+										<div class="panel-body">
+											<h3 class="panel-body-title h-h3 h-blod">帮您详细解析PPP的歪路与正道</h3>
+											<p class="panel-body-cont">思睿致远信息咨询（北京）有限公司，拥有深厚的旅游行业研究
+											背合，通过连续性数据调查和定制化专项研究，提供对旅游行业
+											管理全方位的独特见解和高附加值的个性化支持。
+
+											</p>
+											<ul class="panel-body-info">
+												<li class="panel-body-info__desc">ppp核心</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div class="table-cell">
+										<div class="panel-head">
+											<div class="day">12</div>
+											<div class="date">2018-09</div>
+										</div>
+									</div>
+									<div class="table-cell">
+										<div class="panel-body">
+											<h3 class="panel-body-title h-h3 h-blod">帮您详细解析PPP的歪路与正道</h3>
+											<p class="panel-body-cont">思睿致远信息咨询（北京）有限公司，拥有深厚的旅游行业研究
+											背合，通过连续性数据调查和定制化专项研究，提供对旅游行业
+											管理全方位的独特见解和高附加值的个性化支持。
+
+											</p>
+											<ul class="panel-body-info">
+												<li class="panel-body-info__desc">ppp核心</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="panel">
+									<div class="table-cell">
+										<div class="panel-head">
+											<div class="day">12</div>
+											<div class="date">2018-09</div>
+										</div>
+									</div>
+									<div class="table-cell">
+										<div class="panel-body">
+											<h3 class="panel-body-title h-h3 h-blod">帮您详细解析PPP的歪路与正道</h3>
+											<p class="panel-body-cont">思睿致远信息咨询（北京）有限公司，拥有深厚的旅游行业研究
+											背合，通过连续性数据调查和定制化专项研究，提供对旅游行业
+											管理全方位的独特见解和高附加值的个性化支持。
+
+											</p>
+											<ul class="panel-body-info">
+												<li class="panel-body-info__desc">ppp核心</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="block block-cooperation">
+					<div class="title-default">
+	<div class="line"></div>
+	<div class="small">cooperation</div>
+	<div class="title">商业合作</div>
+</div>
+					<p class="artical">
+						思睿致远信息咨询（北京）有限公司，拥有深厚的旅游行业研究背景及领先的互联网技术优势，是一家为各级旅游行政
+						主管部门提供旅游领域的民意调查、旅游服务质量监测、满意度测评、舆情监测、旅游公共服务提升相关服务的专业机构，致
+					</p>
+					<div class="row h-card-list">
+						<div class="col-sm-4 col-xs-4 h-card"></div>
+						<div class="col-sm-4 col-xs-4 h-card"></div>
+						<div class="col-sm-4 col-xs-4 h-card"></div>
+					</div>
+				</li>
+				<div class="block block-form">
+					<div class="title-default">
+	<div class="line"></div>
+	<div class="small">cooperation</div>
+	<div class="title">联系我们</div>
+</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-sm-offset-6">
+							<form>
+								<label class="block-form-label" for="">在线留言</label>
+								<div class="h-form-control">
+									<input type="text" name="user" placeholder="您的称呼" maxlength="40" class="h-control">
+								</div>
+								<div class="h-form-control">
+									<input type="text" name="tele" placeholder="联系方式" maxlength="40" class="h-control">
+								</div>
+								<div class="h-form-control">
+									<textarea name="h-content" placeholder="留言内容" id="" cols="30" rows="4"  class="h-control"></textarea>
+								</div>
+								<button class="h-button" type="button">提交</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>
+		<footer class="h-footer">
+	<div class="container-fluid">
+	<div class="col-sm-5 col-xs-12">
+		<div class="bigname">思睿致远信息咨询（北京）有限公司</div>
+	</div>
+	<div class="col-sm-7 col-xs-12">
+		<div class="footer-nav-wrap clearfix">
+			<ul class="footer-nav">
+				<li class="nav-item">联系电话：010-88888888</li>
+				<li class="nav-item">公司邮箱：xxxxxxxxxxxxx</li>
+				<li class="nav-item">公司地址：Xxxxxxxxxxxxx</li>
+				<li class="nav-item">Copyright:xxxxxxxxxx</li>
+				<li class="nav-item">备案号:xxxxxxxxxxxxx</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</footer>
+	</div>
+</body>
+</html>

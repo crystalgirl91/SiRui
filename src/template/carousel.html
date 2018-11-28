@@ -1,0 +1,16 @@
+<div id="carousel-example-generic" class="carousel slide h-carousel" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="background-image: url(./images/index/nav1.jpg);"></div>
+  </div>   
+</div>
+<script>
+  var ele = document.getElementById("carousel-example-generic");
+  var hammertime = new Hammer(ele);
+  hammertime.on('swipeleft', function(ev) {
+     $("#carousel-example-generic").carousel('next');
+  });
+  hammertime.on('swiperight', function(ev) {
+      $("#carousel-example-generic").carousel('prev');
+  });
+  $("#carousel-example-generic").carousel('cycle');
+</script>

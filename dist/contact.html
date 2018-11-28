@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<!-- 设置移动端视图 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<meta name="format-detection" content="telphone=no, email=no" />
+<link rel="stylesheet" type="text/css" href="./styles/reset.css">
+<link rel="stylesheet" type="text/css" href="./plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./styles/main.css">
+<link rel="stylesheet" type="text/css" href="./styles/template.css">
+<script type="text/javascript" src="./plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="./plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./plugins/hammer/hammer.min.js"></script>
+
+</head>
+<body>
+	<div class="h-container">
+		<header class="h-header">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a href="./index.html">公司首页</a></li>
+          <li ><a href="./desc.html">企业简介</a></li>
+          <li ><a href="./news.html">行业新闻</a></li>
+          <li ><a href="./cooperation.html">商务合作</a></li>
+          <li ><a href="service.html">调研服务</a></li>
+          <li class='active'><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+		<div id="carousel-example-generic" class="carousel slide h-carousel" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="background-image: url(./images/index/nav1.jpg);"></div>
+  </div>   
+</div>
+<script>
+  var ele = document.getElementById("carousel-example-generic");
+  var hammertime = new Hammer(ele);
+  hammertime.on('swipeleft', function(ev) {
+     $("#carousel-example-generic").carousel('next');
+  });
+  hammertime.on('swiperight', function(ev) {
+      $("#carousel-example-generic").carousel('prev');
+  });
+  $("#carousel-example-generic").carousel('cycle');
+</script>
+		<div class="body-contact">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 h-card-wrap">
+					<div class="h-card">
+						<img src="./images/contact/card1.png" alt="" class="h-card-icon">
+						<P>注册地址：湖北省武汉市某某区某某 </P>
+						<P>某某3号楼2041室</P>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 h-card-wrap">
+					<div class="h-card">
+						<img src="./images/contact/card2.png" alt="" class="h-card-icon">
+						<P>联系电话：0888-3333-4456</P>
+						<P>企业又想：3080399@163.com</P>
+						
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 h-card-wrap">
+					<div class="h-card h-card-special">
+						<img src="./images/contact/card3.png" alt="" class="h-card-icon">
+						<P>官网地址：wwww.8888.com</P>
+					</div>
+				</div>
+			</div>
+			<div class="baiduwrap container-fluid">
+				<div class="row">
+					<div class="col-sm-4 col-xs-12 baidumap-left">
+						<div class="">
+							<h4 class="h-h3 h-bold">常德运营中心</h4>
+							<ul class="map-list">
+								<li class="map-info map-info-tel">客服电话：0736-7226000</li>
+								<li class="map-info map-info-mess">融资咨询：0736-7226000</li>
+								<li class="map-info map-info-person">区域代理：0736-7226000</li>
+								<li class="map-info map-info-money">资金合作：188-7360-0000 高经理 gaoge@ysemm.com</li>
+								<li class="map-info map-info-address">公司地址：常德市武陵区洞庭大道368号浙商广场B座16楼</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-8 col-xs-12 baidumap-right">
+						<div class="">
+						<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<div style="height: 250px;width: 100%;border:#ccc solid 1px;" id="dituContent"></div>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(115.038071,30.207777);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我的地址",content:"哈哈哈",point:"115.03777|30.207762",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer class="h-footer">
+	<div class="container-fluid">
+	<div class="col-sm-5 col-xs-12">
+		<div class="bigname">思睿致远信息咨询（北京）有限公司</div>
+	</div>
+	<div class="col-sm-7 col-xs-12">
+		<div class="footer-nav-wrap clearfix">
+			<ul class="footer-nav">
+				<li class="nav-item">联系电话：010-88888888</li>
+				<li class="nav-item">公司邮箱：xxxxxxxxxxxxx</li>
+				<li class="nav-item">公司地址：Xxxxxxxxxxxxx</li>
+				<li class="nav-item">Copyright:xxxxxxxxxx</li>
+				<li class="nav-item">备案号:xxxxxxxxxxxxx</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</footer>
+	</div>
+</body>
+</html>
